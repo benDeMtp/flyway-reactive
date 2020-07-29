@@ -1,0 +1,15 @@
+quarkus:
+  flyway:
+    migrate-at-start: true
+    schemas: test
+  datasource:
+    jdbc:
+      url: jdbc:tc:mysql:5.7.22:///test?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+      driver: org.testcontainers.jdbc.ContainerDatabaseDriver
+    reactive:
+      url: jdbc:tc:mysql:5.7.22:///test?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+      driver: com.mysql.cj.jdbc.Driver
+    username: test
+    max-size: 20
+    password: test
+    db-kind: mysql
